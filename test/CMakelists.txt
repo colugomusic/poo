@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 4.3.1)
+project(poo-test)
+
+add_executable(poo-test)
+
+target_sources(poo-test PRIVATE
+	src/main.cpp
+)
+
+target_link_libraries(poo-test PRIVATE poo::poo)

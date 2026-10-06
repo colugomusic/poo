@@ -1,0 +1,46 @@
+{
+	"version": 8,
+	"configurePresets": [
+		{
+			"name": "cfg-base",
+			"hidden": true,
+			"cacheVariables": {
+				"CMAKE_EXPORT_COMPILE_COMMANDS"   : "ON",
+				"CMAKE_POSITION_INDEPENDENT_CODE" : "ON",
+				"CMAKE_CXX_STANDARD_REQUIRED"     : "ON",
+				"CMAKE_CXX_STANDARD"              : "23"
+			}
+		},
+		{
+			"name": "cfg-linux-ninja",
+			"displayName": "Linux: Ninja",
+			"hidden": true,
+			"inherits": "cfg-base",
+			"generator": "Ninja"
+		},
+		{
+			"name": "cfg-windows-ninja-cl",
+			"displayName": "Windows: Ninja (cl.exe)",
+			"hidden": true,
+			"inherits": "cfg-base",
+			"generator": "Ninja"
+		},
+		{
+			"name": "cfg-macos-ninja",
+			"displayName": "macOS: Ninja",
+			"hidden": true,
+			"inherits": "cfg-base",
+			"generator": "Ninja",
+			"cacheVariables": {
+				"CMAKE_OSX_ARCHITECTURES": "arm64;x86_64"
+			}
+		},
+		{
+			"name": "cfg-windows-vs2026",
+			"displayName": "Windows: Visual Studio 2026",
+			"hidden": true,
+			"inherits": "cfg-base",
+			"generator": "Visual Studio 18 2026"
+		}
+	]
+}
